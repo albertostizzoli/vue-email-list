@@ -11,7 +11,7 @@
 <body>
     <div id="app" class="container mt-3">
         <button class="btn btn-primary p-3" @click="getEmails">Genera mail</button>
-        <ul>
+        <ul v-if="emails.length >=10">
             <li v-for="mail in emails">{{mail}}</li>
         </ul>
     </div>
