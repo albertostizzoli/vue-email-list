@@ -9,11 +9,16 @@
     <title>Vue Email List</title>
 </head>
 <body>
-    <div id="app" class="container mt-3">
-        <button class="btn btn-primary p-3" @click="getEmails">Genera mail</button>
-        <ul v-if="emails.length >=10">
-            <li v-for="mail in emails">{{mail}}</li>
-        </ul>
+    <div id="app" class="container mt-3 text-center">
+        <div class="row">
+            <div class="col-12">
+                <h1>VUE EMAIL LIST</h1>
+                <button class="btn btn-primary p-3" @click="getEmails">Genera mail</button>
+                <ul class="list-group mt-3" v-if="emails.length >=10">
+                    <li class="list-group-item" v-for="mail in emails">{{mail}}</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
